@@ -1,26 +1,21 @@
-<h1>
-    Welcome to the home page
-<h1>
-<p>
-    Hello, {{ $nome }}!
-</p>
-<p>
-    Your habits are:
-</p>
-<ul>
-    @foreach ($habits as $habit)
-        <li>{{ $habit }}</li>
-    @endforeach
-</ul>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-@auth
-    <p>
-        Você está logado!
-    </p>
-@endauth
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ config('app.name') }}</title>
 
-@guest
-    <p>
-        Você não está logado!
-    </p>
-@endguest
+    @vite('resources/css/app.css')
+</head>
+
+<body>>
+
+    <div class="flex items-center justify-center h-screen">
+        <h1 class="text-4xl font-bold text-gray-800 title">Bem-vindo ao meu {{ config('app.name') }}!</h1>
+    </div>
+
+</body>
+
+</html>
